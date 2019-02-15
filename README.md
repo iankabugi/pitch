@@ -22,9 +22,10 @@ Ian Kabugi
 ### BDD
 |     | Behaviour    |          Input                  | Output    | 
 |------| --------------------|---------------|------------------
-|  1. | display a menu with navigation options    | click on home,news and try me     | redirect to relevant page     |
-|  2. | display news articles | select an article and pree button go to full a....   | taken to the actual article|
-|  3. | display articles from sources   | click the sources page      | redirect to artcle news sources  |
+|  1. | click log in   | add credentials   | error please sign up first    |
+|  2. | click register| enter ur information and press submit   | taken to the welcome page and also supposed to receive an email|
+|  3. | add a pitch  | enter a pitch in the textbox      | display pitch  |
+|  4. | vote for a pitch | vote up/down | display number of votes  |
 
 
 ## Known Bugs
