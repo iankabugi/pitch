@@ -1,0 +1,45 @@
+{% extends 'base.html'%}
+{% block styles%}
+{{ super() }}
+<link rel="stylesheet" href="{{url_for('static',filename='index.css')}}">
+{% endblock %}
+{% block content %}
+<div class="container">
+    <h1 style="text-align:center">Share your Pitch...</h1>
+    <div class="row1">
+        <h1>Media Pitch</h1>
+        <p>Always target the righ beat</p>
+        <p>Posted on {{date}} by {{pitch.user.username| capitalize}}</p>
+        <a href="/pitch/{{pitch.id}}?like=1" class="col btn btn-success">Like
+        </a>{{pitch.likes}} <a href="/pitch/{{pitch.id}}?dislike=1">Dislike</a>
+        <p>Target specific writers, not publications</p>
+        <p class="col">{{numberOfLikes}}</p>
+        <button class="col btn btn-success" (click)="likeButtonClick()">Like</button>
+        <button class="col btn btn-danger" (click)="dislikeButtonClick()">Dislike</button>
+        <h4>Comments</h4>
+        <hr>
+        {% if current_user.is_authenticated %}
+        {{ wtf.quick_form(comment_form) }}
+        {%endif%}
+        {{macro.displayComments(comments)}}
+    </div>
+    <div class="row2">
+        <h1>Job promotion Pitch</h1>
+        <p>Negotiate a Lateral Move Salary</p>
+        <p class="col">{{numberOfLikes}}</p>
+        <a href="/pitch/{{pitch.id}}?like=1" class="col btn btn-success">Like
+        </a>{{pitch.likes}} <a href="/pitch/{{pitch.id}}?dislike=1">Dislike</a>
+        <p>Write a Letter to a Company Requesting Job Responsibilities</p>
+        <p class="col">{{numberOfLikes}}</p>
+        <a href="/pitch/{{pitch.id}}?like=1" class="col btn btn-success">Like
+        </a>{{pitch.likes}} <a href="/pitch/{{pitch.id}}?dislike=1">Dislike</a>
+        <h4>Comments</h4>
+        <hr>
+        {% if current_user.is_authenticated %}
+        {{ wtf.quick_form(comment_form) }}
+        {%endif%}
+        {{macro.displayComments(comments)}}
+    </div>
+    </div>
+</div>
+{% endblock %}
