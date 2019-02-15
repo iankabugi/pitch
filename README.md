@@ -23,7 +23,7 @@ Ian Kabugi
 |     | Behaviour    |          Input                  | Output    | 
 |------| --------------------|---------------|------------------
 |  1. | click log in   | add credentials   | error please sign up first    |
-|  2. | click register| enter ur information and press submit   | taken to the welcome page and also supposed to receive an email|
+|  2. | click register| enter your information and press submit   | taken to the welcome page and also supposed to receive an email|
 |  3. | add a pitch  | enter a pitch in the textbox      | display pitch  |
 |  4. | vote for a pitch | vote up/down | display number of votes  |
 
